@@ -1,0 +1,20 @@
+.each-country-link{
+    text-decoration: none;
+    color: #00aac8;
+    .each-country{
+        grid-column: auto;
+        background-color: #d0ecf4;
+        padding: 20px;
+        height: 90px;
+        border-radius: 6px;
+        box-shadow: 2px 4px 4px #eee;
+        cursor: pointer;
+        transition: 1s all;
+        &:hover{
+            font-size: 18px;
+            padding: 30px;
+            background: #00aac8;
+            color: #fff;
+        }
+    }
+}

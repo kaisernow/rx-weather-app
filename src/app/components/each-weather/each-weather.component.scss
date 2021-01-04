@@ -1,0 +1,46 @@
+.each-weather{
+    background: #e1f1ff;
+    padding: 22px;
+    .location-details{
+        margin-left: 20px;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 12px;
+        padding: 12px;
+
+        .current-weather{
+            padding: 30px;
+            color: #fff;
+            background: #00aac8;
+            transition: 0.8s all;
+            box-shadow: 4px 4px 9px #c8d2db;
+            cursor: pointer;
+            &:hover{
+                padding: 20px;
+            }
+        }
+        .weather-forecast{
+            color: #fff;
+            padding: 30px;
+            background: #00aac8;
+            transition: 0.8s all;
+            box-shadow: 4px 4px 9px #c8d2db;
+            cursor: pointer;
+            &:hover{
+                padding: 20px;
+            }
+
+        }
+        
+    }
+    @media screen and (max-width: 768px){
+        .wrapper{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-gap: 12px;
+            padding: 12px;
+        }
+    }
+}

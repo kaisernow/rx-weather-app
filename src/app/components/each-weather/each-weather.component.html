@@ -1,0 +1,35 @@
+<ng-container *ngIf="weatherData.location.country">
+    <section class="each-weather">
+      <div class="location-details">
+          <h4>Country : {{weatherData.location.country}}</h4>
+          <div>Region: {{weatherData.location.region}}</div>
+          <div>Lat : {{weatherData.location.lat}}</div>
+          <div>Long : {{weatherData.location.lon}}</div>
+      </div>
+ 
+      
+        <div class="wrapper">
+          <div class="current-weather">
+            <h4>Current Weather</h4><br />
+            Condition: {{ weatherData.current.condition.text}}<br />
+            <img [src]="weatherData.current.condition.icon"  /><br />
+            Temperature : {{weatherData.current.temp_c}}°C | {{ weatherData.current.temp_f}}°F<br />
+      
+            humidity: {{ weatherData.current.humidity }} (g/m3)<br />
+      
+      
+          </div>
+          <div class="weather-forecast">
+            <h4>Tommorrow's Weather Forecast</h4><br/>
+            Condition: {{ weatherData.forecast.forecastday[1].day.condition.text}}<br />
+            <img [src]="weatherData.forecast.forecastday[1].day.condition.icon"  /><br />
+            Average Temperature : {{weatherData.forecast.forecastday[0].day.avgtemp_c}}°C | {{ weatherData.forecast.forecastday[1].day.avgtemp_f}}°F<br />
+      
+            Average Humidity: {{ weatherData.forecast.forecastday[1].day.avghumidity }} (g/m3)<br />
+          </div>
+        </div>
+      </section>
+</ng-container>
+<ng-container *ngIf="!weatherData.location.country">
+  ...Fetching From Weather Service. Please Wait!
+</ng-container>

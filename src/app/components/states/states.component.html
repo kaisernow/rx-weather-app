@@ -1,0 +1,14 @@
+<section class="countries-wrapper" *ngIf="states.length > 0">
+    <h3>Click On Your State Name</h3>
+    <div class="countries">
+        <ng-container *ngFor = "let c of states" >
+            <app-each-state [stateName]="c.StateName">
+            </app-each-state>
+          </ng-container>
+    </div>
+  </section>
+  
+  <ng-container *ngIf="states.length === 0">
+    <p>Fetching States...Please Wait</p>
+  </ng-container>
+  

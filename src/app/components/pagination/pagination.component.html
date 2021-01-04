@@ -1,0 +1,8 @@
+<section class="pagination-section">
+    <ng-container *ngFor="let page of numberOfPages">
+      <div class="page-no" (click)="goToPage(page)" [ngStyle]="{'background-color': currentPage === page?'#2561a1':'#00aac8'}">
+        {{page}}
+      </div>
+    </ng-container>      
+</section>
+

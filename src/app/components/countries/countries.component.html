@@ -1,0 +1,14 @@
+<section class="countries-wrapper" *ngIf="countries.length > 0">
+  <h3>Click On Your Country Name</h3>
+  <div class="countries">
+      <ng-container *ngFor = "let c of countries" >
+          <app-each-country [countryName]="c.CountryName">
+          </app-each-country>
+      </ng-container>
+  </div>
+<app-pagination [total]="246" [currentPage]="currentPageNumber"></app-pagination>
+</section>
+
+<ng-container *ngIf="countries.length === 0">
+  <p>Fetching Countries...Please Wait.</p>
+</ng-container>
